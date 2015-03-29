@@ -37,7 +37,7 @@ Default configuration is stored in ``/logrotate.conf``
 
 ## Quick Start
 
-	docker run --name='logrotate' -it --rm \
+	docker run --name='logrotate' --rm \
 	-v $(pwd)/logrotate.conf:/logrotate.conf \
 	-v $(pwd)/logs:/var/log \
 	inem0o/logrotate
