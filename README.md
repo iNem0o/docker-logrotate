@@ -1,4 +1,4 @@
-# inem0o/logrotate  -  logrotate container image
+# logrotate docker image
 - [Introduction](#introduction)
 - [Version](#version)
 - [Configuration](#configuration)
@@ -7,9 +7,10 @@
 
 ## Introduction
 
-Dockerfile to build a lightweight logrotate container image based on [Alpine Linux](https://www.alpinelinux.org/about/).
+Docker container allowing you to use logrotate as a docker command.
 
-Total size is **under 7mb**
+This container is based on [Alpine Linux](https://www.alpinelinux.org/about/) with a total size **under 7mb**
+
 
 ## Version
 
@@ -22,7 +23,7 @@ Latest version is **1.0.0** including Logrotate **3.8.8**
 
 ## Configuration
 
-Default configuration is stored in ``/logrotate.conf`` 
+Default configuration is stored in ``/logrotate.conf`` and you should use a docker volume to add your own
 
 	/var/log/nginx/*.log {
 	  daily
@@ -37,7 +38,7 @@ Default configuration is stored in ``/logrotate.conf``
 
 ## Quick Start
 
-	docker run --name='logrotate' --rm \
+	docker run --rm \
 	-v $(pwd)/logrotate.conf:/logrotate.conf \
 	-v $(pwd)/logs:/var/log \
 	inem0o/logrotate
