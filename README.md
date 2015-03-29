@@ -9,7 +9,7 @@
 
 Docker container allowing you to use logrotate as a docker command.
 
-This container is based on [Alpine Linux](https://www.alpinelinux.org/about/) with a total size **under 7mb**
+This container is based on [Alpine Linux](https://www.alpinelinux.org/about/)
 
 
 ## Version
